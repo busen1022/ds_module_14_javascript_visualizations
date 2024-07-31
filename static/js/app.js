@@ -17,7 +17,7 @@ function buildMetadata(sample) {
     // Inside a loop, you will need to use d3 to append new
     // tags for each key-value in the filtered metadata.
     for (const [key, value] of Object.entries(info)) {
-      panel.append("h6").text('${key}: ${value}');
+      panel.append("h6").text(`${key}: ${value}`);
     }
   });
 }
@@ -131,8 +131,8 @@ function init() {
 // Function for event listener
 function optionChanged(newSample) {
   // Build charts and metadata panel each time a new sample is selected
-  buildCharts(default_name);
-  buildMetadata(default_name);
+  buildCharts(newSample);
+  buildMetadata(newSample);
 }
 
 // Initialize the dashboard
