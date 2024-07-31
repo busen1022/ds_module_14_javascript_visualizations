@@ -89,7 +89,10 @@ function buildCharts(sample) {
 
     // Add a title
     let layout = {
-      title: "Top 10 Bacteria Cultures Found"
+      title: "Top 10 Bacteria Cultures Found",
+      xaxis: {
+        title: 'Number of Bacteria'
+      },
     };
 
   // Assign plot to "div", id "plot"
